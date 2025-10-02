@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+        /* Border Glow Animation */
+        @keyframes borderGlow {
+            0% {
+                box-shadow: 0 0 10px #f472b6, 0 0 20px #f472b6, 0 0 40px #f472b6;
+            }
+
+            50% {
+                box-shadow: 0 0 20px #a78bfa, 0 0 40px #a78bfa, 0 0 60px #a78bfa;
+            }
+
+            100% {
+                box-shadow: 0 0 10px #f472b6, 0 0 20px #f472b6, 0 0 40px #f472b6;
+            }
+        }
+
+        .animate-border-glow {
+            animation: borderGlow 3s infinite alternate;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-pink-200 via-purple-200 to-pink-100 min-h-screen flex flex-col text-gray-800">
+
+    <!-- Navbar Responsive -->
+    <nav class="fixed top-0 w-full bg-white/40 backdrop-blur-md shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-pink-600">Untuk Kamu ❤️</h1>
+            <!-- Menu desktop -->
+            <ul class="hidden md:flex space-x-6 font-medium">
+                <li><a href="#home" class="hover:text-pink-600 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-pink-600 transition">Tentang</a></li>
+                <li><a href="#gallery" class="hover:text-pink-600 transition">Galeri</a></li>
+                <li><a href="#love" class="hover:text-pink-600 transition">Pesan</a></li>
+            </ul>
+            <!-- Hamburger button -->
+            <button id="menu-btn" class="md:hidden flex flex-col space-y-1">
+                <span class="w-6 h-0.5 bg-pink-600"></span>
+                <span class="w-6 h-0.5 bg-pink-600"></span>
+                <span class="w-6 h-0.5 bg-pink-600"></span>
+            </button>
+        </div>
+        <!-- Menu mobile -->
+        <div id="menu" class="hidden md:hidden bg-white/80 backdrop-blur-md">
+            <ul class="flex flex-col items-center space-y-4 py-4 font-medium">
+                <li><a href="#home" class="menu-link hover:text-pink-600 transition">Home</a></li>
+                <li><a href="#about" class="menu-link hover:text-pink-600 transition">Tentang</a></li>
+                <li><a href="#gallery" class="menu-link hover:text-pink-600 transition">Galeri</a></li>
+                <li><a href="#love" class="menu-link hover:text-pink-600 transition">Pesan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="flex flex-col items-center justify-center text-center mt-24 p-6">
+        <h2 class="text-4xl md:text-6xl font-bold text-pink-700 animate-bounce">Hai Putry</h2>
+        <p class="mt-4 text-lg md:text-xl text-gray-600">Web ini khusus aku buat untukmu
+            ✨</p>
+
+    </section>
+
+    <!-- Tentang -->
+    <section id="about" class="max-w-4xl mx-auto text-center mt-24 p-6">
+        <h3 class="text-3xl font-bold text-purple-700 mb-4">Tentang Kamu 🌸</h3>
+        <p class="text-lg text-gray-700 leading-relaxed">
+            Kamu adalah orang yang membuat hari-hariku lebih indah, seperti senja yang mewarnai langit.
+            Aku sebenarnya malu dalam hal ini.💖
+        </p>
+    </section>
+
+    <!-- Galeri Card -->
+    <section id="gallery" class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-8">
+        <!-- Card 1 -->
+        <div class="relative group rounded-2xl overflow-hidden shadow-lg">
+            <div class="absolute inset-0 rounded-2xl border-4 border-pink-400 animate-border-glow"></div>
+            <img src="images/putry1.jpg" alt="Foto 1"
+                class="rounded-2xl w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 text-white">
+                <h3 class="text-lg font-bold">Anggun🌸</h3>
+                <p class="text-sm"></p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="relative group rounded-2xl overflow-hidden shadow-lg">
+            <div class="absolute inset-0 rounded-2xl border-4 border-purple-400 animate-border-glow"></div>
+            <img src="images/putry2.jpg" alt="Foto 2"
+                class="rounded-2xl w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 text-white">
+                <h3 class="text-lg font-bold">Si Lucu</h3>
+                <p class="text-sm"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pesan Cinta -->
+    <section id="love" class="w-full bg-gradient-to-r from-pink-300 via-purple-200 to-pink-200 py-20 mt-24 text-center">
+        <h3 class="text-4xl font-bold text-white drop-shadow-md mb-6">Pesan Untukmu 💌</h3>
+        <p class="max-w-3xl mx-auto text-lg text-gray-800 bg-white/60 backdrop-blur-md rounded-2xl p-6 shadow-lg">
+            "Putry, walaupun kita belum pernah bertemu secara langsung, aku merasa sudah cukup mengenalmu melalui
+            interaksi kita di dunia virtual. Aku ingin bilang kalau aku sangat kagum dengan kepribadianmu, cara kamu
+            berbicara, dan cara kamu menjalani hidup. Aku merasa ada sesuatu yang spesial ketika kita berinteraksi, dan
+            aku ingin kamu tahu bahwa aku memiliki perasaan lebih dari sekadar kagum. Aku berharap kamu bisa menerima
+            pengakuan ini, tapi aku juga paham jika kamu tidak merasakan hal yang sama. Itu urusanmu, dan aku hormati
+            apapun keputusanmu. Aku hanya ingin jujur tentang apa yang aku rasakan."
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-24 p-6 text-center text-gray-600">
+        <p>Made with ❤️ by ARDIANRAHMAN</p>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        // GSAP Animations
+        gsap.from("h2", { duration: 1, y: -50, opacity: 0, ease: "bounce" });
+        gsap.from("p", { duration: 1.5, opacity: 0, delay: 0.5 });
+        gsap.from("button", { duration: 1, scale: 0, delay: 1 });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById("menu-btn");
+        const menu = document.getElementById("menu");
+        const menuLinks = document.querySelectorAll(".menu-link");
+
+        menuBtn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+
+        // Close menu after clicking a link
+        menuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                menu.classList.add("hidden");
+            });
+        });
+    </script>
+</body>
+
+</html>
+```
